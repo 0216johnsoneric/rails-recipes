@@ -1,0 +1,20 @@
+// Place all the styles related to the pets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+#pet-show img {
+    border-radius: 100px;
+    border: rgb(140, 135, 131) 5px solid;
+    z-index: 2;
+    position: relative;
+    width:auto;
+    max-height: 200px;  
+}
+#pet-show {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    
+}
+.petform h1{
+margin-left: 1%;
+}

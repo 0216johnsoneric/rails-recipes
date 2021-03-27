@@ -1,0 +1,31 @@
+<div class="recipe-page">
+<h1>Recipes</h1>
+
+<%= form_tag("/recipes", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<%= form_tag("/recipes", method: "get") do %>
+  <%= label_tag(:ingredient, "Search by Ingredient Name:") %>
+  <%= text_field_tag(:ingredient) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<%= form_tag("/recipes", method: "get") do %>
+  <%= label_tag(:pet_category_id, "Select A Pet Category:") %>
+  <%= collection_select(:recipe, :pet_category_id, PetCategory.all, :id, :name, :prompt => true) %>
+  <%= submit_tag("Filter") %>
+<% end %>
+
+
+
+
+
+
+<ul><% @recipes.each do |recipe| %>
+<li><%=link_to recipe.title, recipe_path(recipe) %> - <%= recipe.pet_category.name %></li>
+<% end %>
+</ul>
+</div>

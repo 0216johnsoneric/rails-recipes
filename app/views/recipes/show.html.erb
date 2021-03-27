@@ -1,0 +1,24 @@
+<div id="recipe-show">
+<h1><%= @recipe.title %></h1>
+<% if @recipe.recipe_img.attached? %>
+<div class="show-img">
+<%= image_tag url_for(@recipe.recipe_img)%>
+</div>
+<% end %>
+<div class="info">
+<h4>Description:</h4><p><%= @recipe.description %></p>
+<h4>Ingredients:</h4>
+<ul>
+<% @recipe.measurements.each do |m|%>
+    <li><%= m.ingredient.name%> - <%=number_with_precision(m.quantity,strip_insignificant_zeros: true)%> <%=m.unit%></li>
+  <% end %>
+  </ul>
+<h4>Instructions:</h4><p class="inst"><%= @recipe.instructions %></p>
+<h4>Pet Category: </h4><p><%= @recipe.pet_category.name%></p>
+<p>Created by: <%= @recipe.user.name %></p>
+<% if current_user == @recipe.user %>
+<%= link_to "Edit Recipe", edit_recipe_path(@recipe)%>
+<%= link_to "Delete Recipe",  @pet,  method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+</div>
+</div>

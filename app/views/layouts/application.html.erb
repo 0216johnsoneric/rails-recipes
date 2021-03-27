@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails Recipes</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+     <meta charset="utf-8"/>
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="../app/stylesheets/styles.css"/>
+        <script src="https://kit.fontawesome.com/bc519c4149.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+  <div id="container">
+  <header> <h1><%= image_tag("logo.jpg") %> <%= link_to "Rails Recipes", root_path %></h1>
+  <nav class="stroke">
+  <ul>
+  <% if !current_user%>
+  <li><%= link_to "Sign Up", signup_path %></li>
+  <li><%= link_to "Log In", login_path %></li>
+  <% end %>
+  <li><%= link_to :recipes, recipes_path %></li>
+   <% if current_user %>
+    <li>
+      <%= link_to "Create Recipe", new_user_recipe_path(current_user) %>
+    </li>
+    <li>
+      <%= link_to "Add Pet", new_user_pet_path(current_user) %>
+    </li>
+    <li>
+      <%= link_to "My Page", user_path(current_user)%>
+    </li>
+    <li>
+      <%= link_to "Log Out", logout_path, method: :post %>
+    </li>
+    <% end %>
+  </ul>
+  </nav>
+  </header>
+    <%= yield %>
+   
+    </div>
+  </body>
+</html>

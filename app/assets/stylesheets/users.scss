@@ -1,0 +1,88 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+// 
+#user-show h1{
+text-align: center;
+font-size: 2.5em;
+background-color: burlywood;
+}
+#user-show {
+    z-index: 2;
+    position: relative;
+}
+#user-show a {
+    text-decoration: none;
+    color:black;
+    
+}
+#user-show h1 img {
+    width:4%;
+}
+#user-show h4 {
+    margin-left:3%;
+    background-color: rgb(208, 238, 242);
+    display: inline-block;
+    font-size: 1.25em;
+    padding: .25%;
+}
+
+.userform h3 {
+    
+    padding-left: 1%;
+    margin-bottom: 0;
+
+}
+#user-show h3 {
+    margin-left: 1%;
+    font-size: 2em;
+}
+
+.userform {
+    z-index: 2;
+    position: relative;
+
+}
+.userform img {
+    padding: 1% 1%;
+}
+.imagesicons {
+    margin-left: 4%;
+
+}
+
+form{
+    padding-left: 1%;
+}
+
+.button{
+    background-color: azure;
+    width: 100px;
+    height: 30px;
+    
+    /*add any other properties you want to style*/
+  }
+  .field_with_errors {
+      background-color: rgb(208, 238, 242);
+      width: 50%;
+  }
+
+  .recipe-page ul{
+    list-style: none;
+    }
+    
+    .recipe-page ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+    .recipe-page ul li {
+       
+        margin-bottom: 1em;
+    }
+    .recipe-page ul li a:hover {
+        background-color: #C4F5ED;
+        color:rgb(140, 135, 131);
+        padding: .25em;
+    }

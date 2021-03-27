@@ -1,0 +1,25 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+ 
+#sessionform {
+    z-index: 2;
+    position: relative;
+}  
+#sessionform img {
+    padding: 1% 1%;
+}
+#sessionform h3{
+margin-bottom:0;
+margin-left: 1%;
+}
+form {
+z-index: 2;
+    position: relative;
+}
+.flashmessage {
+    margin-left: 1%;
+    color: darkred;
+}

@@ -1,0 +1,80 @@
+// Place all the styles related to the recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+#recipe-show img {
+    border-radius: 100px;
+    border: rgb(140, 135, 131) 5px solid;
+    z-index: 2;
+    position: relative;
+    width:auto;
+    max-height: 200px;  
+}
+.show-img {
+    text-align: center;
+    margin-bottom: 1%;
+}
+#recipe-show {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+}
+#recipe-show h4 {
+    background-color:#C4F5ED;
+}
+#recipe-show ul {
+    list-style: none;
+    padding-left: 0;
+}
+.info {
+    background-color:#DEC1A6;
+    display: inline-block;
+    padding: 2% 6%;
+    border: 6px double #C4F5ED;
+    margin-bottom: 2%;
+    max-width: 500px;
+    
+}
+.inst {
+    text-align: left;
+}
+.info a {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(245, 245, 245);
+    padding:.25em;
+    
+}
+.info a:hover {
+    background-color:#C4F5ED;
+}
+.recipe-page {
+    z-index: 2;
+    position: relative;
+}
+.recipe-page h1 {
+    text-align: center;
+    font-size: 2.5em;
+    background-color: burlywood;
+}
+.recipe-page ul{
+list-style: none;
+}
+
+.recipe-page ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.recipe-page ul li {
+   
+    margin-bottom: 1em;
+}
+.recipe-page ul li a:hover {
+    background-color: #C4F5ED;
+    color:rgb(140, 135, 131);
+    padding: .25em;
+}
+.recipeform h1{
+    margin-left: 1%;
+}

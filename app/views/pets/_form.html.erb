@@ -1,0 +1,17 @@
+<%= form_for(@pet) do |f| %>
+<%= f.label "Select A Pet Category" %>
+<%= f.collection_select :pet_category_id, PetCategory.all, :id, :name, prompt:true %><br>
+<%= f.label "Or Create New Pet Category" %>
+  <%= f.fields_for :pet_category, @pet.build_pet_category do |pc|%>
+  <%= pc.label :name %>
+  <%= pc.text_field :name %><br>
+  <% end %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.label "Pet Image"%>
+<%= f.file_field :pet_img %>
+  
+  <br/>
+
+  <%= f.submit %>
+<% end %>

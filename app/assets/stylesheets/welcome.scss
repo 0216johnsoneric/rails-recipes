@@ -1,0 +1,49 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+#wc {
+position: relative;
+display: inline-block;
+
+}
+
+#welcome {
+    text-align: center;
+    
+}
+
+#welcome h1{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: white;
+    margin-left:5%;
+    z-index: 2;
+    text-shadow: 2px 2px 4px #000000;
+}
+#welcome h3 {
+color:white;
+z-index: 2;
+position: absolute;
+  bottom: 10px;
+  right: 16px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#welcome img {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+  height: auto;
+  
+}
+#welcome a{
+  z-index: 2;
+position: absolute;
+}
+
+
+
+
+
+
