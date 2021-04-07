@@ -14,7 +14,7 @@
 <% end %>
 
 <%= form_tag("/recipes", method: "get") do %>
-  <%= label_tag(:pet_category_id, "Select A Pet Category:") %>
+  <%= label_tag(:pet_category_id, "Select A Food Category:") %>
   <%= collection_select(:recipe, :pet_category_id, PetCategory.all, :id, :name, :prompt => true) %>
   <%= submit_tag("Filter") %>
 <% end %>

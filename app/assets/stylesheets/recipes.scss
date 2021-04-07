@@ -67,7 +67,7 @@ list-style: none;
     margin-bottom: 1em;
 }
 .recipe-page ul li {
-   
+   z-index: 4;
     margin-bottom: 1em;
 }
 .recipe-page ul li a:hover {
@@ -76,5 +76,6 @@ list-style: none;
     padding: .25em;
 }
 .recipeform h1{
+    z-index: 3;
     margin-left: 1%;
 }
