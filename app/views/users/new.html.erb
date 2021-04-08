@@ -1,23 +1,28 @@
 <div class="userform">
-<% if @user.errors.any? %>
-<ul>
-  <% @user.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
+  <% if @user.errors.any? %>
+    <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+    </ul>
   <% end %>
-  
-</ul>
-<% end %>
-<h3>SIGN UP: </h3>
-<%= form_for @user do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %><br>
-<%= f.label :email %>
-<%= f.text_field :email %><br>
-<%= f.label "Password (minimum of 6 characters)" %>
-<%= f.password_field :password %><br>
-<%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation %><br>
-<%= f.submit "create user", :class => "button" %>
-<% end %>
-<%= render partial: "social" %>
+
+  <div class="signupform text-center">
+    <br></br>
+     
+      <h3>SIGN UP: </h3>
+      <%= form_for @user do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %><br>
+      <%= f.label :email %>
+      <%= f.text_field :email %><br>
+      <%= f.label "Password (6 characters)" %>
+      <%= f.password_field :password %><br>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %><br>
+      <br></br>
+      <%= f.submit "Create User", :class => "button" %>
+      <% end %>
+
+    </div>
 </div>

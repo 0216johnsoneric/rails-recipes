@@ -4,7 +4,8 @@
 
 
  
-#sessionform {
+.loginform {
+    text-align: center;
     z-index: 2;
     position: relative;
 }  
@@ -16,7 +17,8 @@ margin-bottom:0;
 margin-left: 1%;
 }
 form {
-z-index: 2;
+    text-align: center;
+    z-index: 2;
     position: relative;
 }
 .flashmessage {

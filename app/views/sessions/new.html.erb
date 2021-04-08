@@ -6,14 +6,15 @@
   </div>
 <% end %>
 
-<div id="sessionform">
-<h3>Log In </h3>
-<%= form_for(:user, url: login_path) do |f| %>
-<%= f.label :email %>
-<%= f.text_field :email %><br>
-<%= f.label :password %>
-<%= f.password_field :password %><br>
-<%= f.submit 'log in', :class => "button"%>
-<% end %>
-<%= render partial: "users/social" %>
+<div class="loginform text-center">
+    <br></br>
+    <h3>Log In </h3>
+    
+    <%= form_for(:user, url: login_path) do |f| %>
+    <%= f.label :useremail %>
+    <%= f.text_field :email %><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>
+    <%= f.submit 'Log In', :class => "button"%>
+    <% end %>
 </div>
