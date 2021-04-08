@@ -1,7 +1,7 @@
 <%= form_for(recipe) do |f| %>
 <%= f.label "Select A Food Category" %>
 <%# one %>
-<%# <%= f.collection_select :pet_category_id, PetCategory.all, :id, :name, prompt:true %><br> %>
+<%= f.collection_select :pet_category_id, PetCategory.all, :id, :name, prompt:true %> <br>
 <%= f.label "Create Food Category" %>
   <%# two %>
   <%= f.fields_for :pet_category, @recipe.build_pet_category do |pc|%>
