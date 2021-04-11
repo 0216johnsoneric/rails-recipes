@@ -14,10 +14,10 @@
 <% end %>
 
 <%= form_tag("/recipes", method: "get") do %>
-  <%= label_tag(:pet_category_id, "Select A Food Category:") %>
-  <%= collection_select(:recipe, :pet_category_id, PetCategory.all, :id, :name, :prompt => true) %>
+  <%= label_tag(:food_category_id, "Select A Food Category:") %>
+  <%= collection_select(:recipe, :food_category_id, FoodCategory.all, :id, :name, :prompt => true) %>
   <%= submit_tag("Filter") %>
-<% end %>
+<% end %> 
 
 
 
@@ -25,7 +25,7 @@
 
 
 <ul><% @recipes.each do |recipe| %>
-<li><%=link_to recipe.title, recipe_path(recipe) %> - <%= recipe.pet_category.name %></li>
+<li><%=link_to recipe.title, recipe_path(recipe) %> - <%= recipe.food_category.name %></li>
 <% end %>
 </ul>
 </div>

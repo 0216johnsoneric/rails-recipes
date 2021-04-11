@@ -1,13 +1,16 @@
+<div class="container text-center">
+
+
 <%= form_for(recipe) do |f| %>
-<%= f.label "Select A Food Category" %>
-<%# one %>
-<%= f.collection_select :pet_category_id, PetCategory.all, :id, :name, prompt:true %> <br>
-<%= f.label "Create Food Category" %>
-  <%# two %>
-  <%= f.fields_for :pet_category, @recipe.build_pet_category do |pc|%>
-  <%= pc.label :name %>
-  <%= pc.text_field :name %><br>
+  <%= f.label "Select A Food Category" %>
+      <%= f.collection_select :food_category_id, FoodCategory.all, :id, :name, prompt:true %> <br> 
+  
+  <%= f.label "Create Food Category" %>
+      <%= f.fields_for :food_category, @recipe.build_food_category do |pc|%>
+      <%= pc.label :name %>
+      <%= pc.text_field :name %><br>
   <% end %>
+  
   <%= f.label :title %>
   <%= f.text_field :title %><br>
   <%= f.label :description %>
@@ -37,3 +40,5 @@
 
   <%= f.submit %>
 <% end %>
+
+</div>

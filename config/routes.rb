@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   resources :ingredients
   resources :measurements
-  resources :pets
+  resources :foods
   resources :recipes
   resources :users, except: [:new] do 
     resources :recipes, only: [:show, :index, :new, :destroy]
-    resources :pets, only: [:show, :new, :destroy]
+    resources :foods, only: [:show, :new, :destroy]
   end
   get '/auth/:provider/callback' => 'sessions#omniauth'
   get '/login' => 'sessions#new'

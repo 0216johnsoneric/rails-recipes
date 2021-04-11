@@ -11,7 +11,7 @@
     <h3>Log In </h3>
     
     <%= form_for(:user, url: login_path) do |f| %>
-    <%= f.label :useremail %>
+    <%= f.label "User Email" %>
     <%= f.text_field :email %><br>
     <%= f.label :password %>
     <%= f.password_field :password %><br>

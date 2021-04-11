@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
         end
           
             @recipes = @recipes.search(params[:q].downcase) if params[:q]
-            @recipes = @recipes.animal(params[:recipe][:pet_category_id]) if params[:recipe] && params[:recipe][:pet_category_id] 
+            @recipes = @recipes.animal(params[:recipe][:food_category_id]) if params[:recipe] && params[:recipe][:food_category_id] 
             @recipes = @recipes.food(params[:ingredient].downcase) if params[:ingredient]
             
     end
@@ -21,12 +21,12 @@ class RecipesController < ApplicationController
     end
 
     def new
-        if params[:pet_category_id] && !PetCategory.exists?(params[:pet_category_id])
+        if params[:food_category_id] && !FoodCategory.exists?(params[:food_category_id])
             redirect_to root_path
             
         else
-          @recipe = Recipe.new(pet_category_id: params[:pet_category_id])
-          4.times do 
+          @recipe = Recipe.new(food_category_id: params[:food_category_id])
+          3.times do 
             m = @recipe.measurements.build
             m.build_ingredient
             end
@@ -66,7 +66,7 @@ class RecipesController < ApplicationController
 
     private
     def recipe_params
-        params.require(:recipe).permit(:title, :description, :instructions, :pet_category_id, :user_id, :recipe_img, :recipe_img_id, ingredient_ids: [], pet_category_attributes:[:name], measurements_attributes:[:unit, :quantity, :id, :_destroy, ingredient_attributes:[:name]])
+        params.require(:recipe).permit(:title, :description, :instructions, :food_category_id, :user_id, :recipe_img, :recipe_img_id, ingredient_ids: [], food_category_attributes:[:name], measurements_attributes:[:unit, :quantity, :id, :_destroy, ingredient_attributes:[:name]])
     end
 
     def set_recipe

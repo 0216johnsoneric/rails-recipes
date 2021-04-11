@@ -19,7 +19,7 @@
 header {
     z-index: 2;
     position: relative;
-    background-color: rgb(174, 253, 234, .6); 
+    background-color: #bdbccc; 
     padding-bottom: .5%;
     
 }

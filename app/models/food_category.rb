@@ -1,7 +1,7 @@
-class PetCategory < ApplicationRecord
+class FoodCategory < ApplicationRecord
     has_many :recipes
     has_many :users, through: :recipes
-    has_many :pets
+    has_many :foods
     validates :name, presence: true, uniqueness: true
     before_validation :capitalize_name
 
