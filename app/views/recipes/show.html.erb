@@ -14,11 +14,11 @@
   <% end %>
   </ul>
 <h4>Instructions:</h4><p class="inst"><%= @recipe.instructions %></p>
-<h4>Pet Category: </h4><p><%= @recipe.pet_category.name%></p>
+<h4>Food Category: </h4><p><%= @recipe.food_category.name%></p>
 <p>Created by: <%= @recipe.user.name %></p>
 <% if current_user == @recipe.user %>
 <%= link_to "Edit Recipe", edit_recipe_path(@recipe)%>
-<%= link_to "Delete Recipe",  @pet,  method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to "Delete Recipe",  url_for(action: :destroy, id: @recipe.id),  method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 </div>
 </div>

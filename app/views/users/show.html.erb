@@ -10,7 +10,7 @@
         <h3>My Recipes:</h3>
 
         <ul><% @user.recipes.each do |recipe|%>
-        <li><%= link_to recipe.title, user_recipe_path(recipe.user_id, recipe) %> - <%= recipe.pet_category.name %></li>
+        <li><%= link_to recipe.title, user_recipe_path(recipe.user_id, recipe) %> - <%= recipe.food_category.name %></li>
         <% end %>
         </ul>
         <h4><%= link_to "Add a Recipe", new_user_recipe_path(current_user) %></h4>
